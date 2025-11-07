@@ -1,0 +1,23 @@
+{
+  "name": "wdio_exercise",
+  "version": "1.0.0",
+  "description": "WDIO Exercise",
+  "keywords": [
+    "BDD",
+    "WDIO"
+  ],
+  "license": "ISC",
+  "author": "sebautistam",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./src/config/wdio.conf.js"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.20.0",
+    "@wdio/cucumber-framework": "^9.20.0",
+    "@wdio/local-runner": "^9.20.0",
+    "@wdio/spec-reporter": "^9.20.0"
+  }
+}
