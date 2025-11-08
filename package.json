@@ -12,7 +12,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./src/config/wdio.conf.js"
+    "wdio": "wdio run ./src/config/wdio.conf.js",
+    "test:registration": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@registration'",
+    "test:login": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@login'",
+    "test:profile": "npx wdio ./src/config/wdio.conf.js --cucumberOpts.tagExpression='@profile'"
   },
   "devDependencies": {
     "@wdio/cli": "^9.20.0",

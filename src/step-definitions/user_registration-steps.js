@@ -2,14 +2,13 @@ const { Given, When, Then } = require('@wdio/cucumber-framework');
 const { expect, $ } = require('@wdio/globals')
 
 Given(/^I am on the registration page$/, async function () {
-    // Navigate to the registration page
     await browser.url('/auth/register');
 });
 
 Given(/^an already registered user (.+) (.+)$/, async function (firstname, lastname) {
-    // Just store the user info for later use
 });
 
+/***SCENARIO 1****/
 When(/^I enter (.+) (.+) (.+) (.+) in the registration form$/, 
     async function (firstname, lastname, email, password) {
         await $('#first_name').setValue(firstname);
@@ -44,6 +43,7 @@ Then(/^the account is not created$/, async function () {
     await expect(url).toContain('auth/register');
 });
 
+/***SCENARIO 2****/
 When(/^I fill out the registration form without email address$/, async function() {
     await $('#first_name').setValue('Alan');
     await $('#last_name').setValue('Smith');
@@ -62,6 +62,7 @@ When(/^I fill out the registration form without email address$/, async function(
     await $('button[type="submit"]').click();
 });
 
+/***SCENARIO 3****/
 When(/^I fill out the registration form correctly$/, async function () {
     
     await $('#first_name').setValue('Alan');
